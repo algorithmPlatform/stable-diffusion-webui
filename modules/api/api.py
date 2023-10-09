@@ -244,6 +244,9 @@ class Api:
         self.add_api_route("/sdapi/v1/scripts", self.get_scripts_list, methods=["GET"], response_model=models.ScriptsList)
         self.add_api_route("/sdapi/v1/script-info", self.get_script_info, methods=["GET"], response_model=List[models.ScriptInfo])
 
+        #自定义
+        self.add_api_route("/sdapi/v1/industry", self.get_industry, methods=["GET"], response_model=models.IndustryModel)
+
         if shared.cmd_opts.api_server_stop:
             self.add_api_route("/sdapi/v1/server-kill", self.kill_webui, methods=["POST"])
             self.add_api_route("/sdapi/v1/server-restart", self.restart_webui, methods=["POST"])
@@ -277,6 +280,13 @@ class Api:
         i2ilist = [script.name for script in scripts.scripts_img2img.scripts if script.name is not None]
 
         return models.ScriptsList(txt2img=t2ilist, img2img=i2ilist)
+    
+    #自定义
+    def get_industry(self):
+        from modules import util
+        config = util.listconfig()
+        return models.IndustryModel(data=config['industry'])
+    #自定义截至
 
     def get_script_info(self):
         res = []

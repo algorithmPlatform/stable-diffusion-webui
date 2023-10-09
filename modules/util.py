@@ -1,5 +1,6 @@
 import os
 import re
+import yaml
 
 from modules import shared
 from modules.paths_internal import script_path
@@ -56,3 +57,9 @@ def ldm_print(*args, **kwargs):
         return
 
     print(*args, **kwargs)
+
+# config.yaml
+def listconfig():
+    with open('configs/config.yaml', 'r') as file:
+        listconfig = yaml.safe_load(file)
+    return listconfig

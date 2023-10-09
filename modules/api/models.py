@@ -311,3 +311,23 @@ class ScriptInfo(BaseModel):
     is_alwayson: bool = Field(default=None, title="IsAlwayson", description="Flag specifying whether this script is an alwayson script")
     is_img2img: bool = Field(default=None, title="IsImg2img", description="Flag specifying whether this script is an img2img script")
     args: List[ScriptArg] = Field(title="Arguments", description="List of script's arguments")
+
+# class IndustryInfo(BaseModel):
+#     industry: list = Field(title="industry")
+
+
+class Lora(BaseModel):
+    id: int
+    name: str
+    lora: str
+    weight: float
+
+class Category(BaseModel):
+    id: int
+    name: str
+    description: str
+    sd: str
+    items: List[Lora]
+
+class IndustryModel(BaseModel):
+    data: List[Category]

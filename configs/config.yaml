@@ -1,0 +1,75 @@
+industry:
+  - id: 1
+    name: 婚庆
+    description: Description for Category 1
+    sd: anything-v5-PrtRE.safetensors
+    items:
+      - id: 101
+        name: 欧式婚礼
+        lora: weddingv1
+        weight: 0.8
+      - id: 102
+        name: 水晶婚礼
+        lora: weddingv2
+        weight: 0.8
+      - id: 103
+        name: 中式婚礼
+        lora: weddingv3
+        weight: 0.8
+  - id: 2
+    name: 建筑
+    description: Description for Category 2
+    sd: anything-v5-PrtRE.safetensors
+    items:
+      - id: 201
+        name: 奶油风
+        lora: archv1
+        weight: 0.8
+      - id: 202
+        name: 赛博朋克风
+        lora: archv2
+        weight: 0.8
+      - id: 203
+        name: 欧式婚礼
+        lora: archv3
+        weight: 0.8
+  - id: 3
+    name: 汽车
+    description: Description for Category 3
+    sd: anything-v5-PrtRE.safetensors
+    items:
+      - id: 301
+        name: 未来科技
+        lora: carv1
+        weight: 0.8
+  - id: 4
+    name: 景观
+    description: Description for Category 4
+    sd: anything-v5-PrtRE.safetensors
+    items:
+      - id: 401
+        name: 杭州园林
+        lora: landv1
+        weight: 0.8
+  - id: 5
+    name: 服装
+    description: Description for Category 5
+    sd: anything-v5-PrtRE.safetensors
+    items:
+      - id: 501
+        name: ins风
+        lora: clov1
+        weight: 0.8
+  - id: 6
+    name: 广告
+    description: Description for Category 6
+    sd: anything-v5-PrtRE.safetensors
+    items:
+      - id: 601
+        name: logo设计
+        lora: adv1
+        weight: 0.8
+      - id: 602
+        name: 电商海报
+        lora: adv2
+        weight: 0.8

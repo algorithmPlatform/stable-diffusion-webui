@@ -4,7 +4,8 @@
 # change the variables in webui-user.sh instead #
 #################################################
 
-
+export COMMANDLINE_ARGS="--use-cpu all --no-half --precision full --skip-torch-cuda-test"
+export CUDA_VISIBLE_DEVICES=-1
 use_venv=1
 if [[ $venv_dir == "-" ]]; then
   use_venv=0
@@ -65,7 +66,7 @@ then
 fi
 
 # this script cannot be run as root by default
-can_run_as_root=0
+can_run_as_root=1
 
 # read any command line flags to the webui.sh script
 while getopts "f" flag > /dev/null 2>&1
